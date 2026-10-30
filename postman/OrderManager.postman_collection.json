@@ -1,0 +1,586 @@
+{
+  "info": {
+    "_postman_id": "f6714aef-f9fe-497c-bbfe-e5f786efec33",
+    "name": "order manager",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "209803"
+  },
+  "item": [
+    {
+      "name": "user",
+      "item": [
+        {
+          "name": "add user json->xml",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"name\": \"Carlos Sousa\", \"email\": \"sousa150@seixal.pt\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/api/user/v1",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "user",
+                "v1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "add user xml->yaml",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/xml"
+              },
+              {
+                "key": "Accept",
+                "value": "application/yaml"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "<UserDTO>\n    <name>Carlos Sousa</name>\n    <email>sousa8@seixal.pt</email>\n</UserDTO>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/api/user/v1",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "user",
+                "v1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "edit user",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/xml",
+                "disabled": true
+              },
+              {
+                "key": "Accept",
+                "value": "application/yaml"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"id\": 1,\n    \"name\": \"Carlos Sousa\",\n    \"email\": \"sousa9@seixal.pt\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/api/user/v1",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "user",
+                "v1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete User",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/api/user/v1/2",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "user",
+                "v1",
+                "2"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "item",
+      "item": [
+        {
+          "name": "add new item json-<xml",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"name\": \"Playstation 179\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/api/item/v1",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "item",
+                "v1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "add new item xml -> yaml",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/xml"
+              },
+              {
+                "key": "Accept",
+                "value": "application/yaml"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "<ItemDTO>\n    <name>Playstation 11</name>\n</ItemDTO>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/api/item/v1",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "item",
+                "v1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "order",
+      "item": [
+        {
+          "name": "add orders  json->xml",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"item\": {\"id\": 1}, \"quantity\": 5, \"user\": {\"id\": 3}}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/api/order/v1",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "order",
+                "v1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "add orders  xml->yaml",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/xml"
+              },
+              {
+                "key": "Accept",
+                "value": "application/yaml"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "<OrderDTO>\n    <item>\n        <id>1</id>\n    </item>\n    <quantity>3</quantity>\n    <user>\n        <id>1</id>\n    </user>\n</OrderDTO>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/api/order/v1",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "order",
+                "v1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getAll orders",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "disabled": true
+              },
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              },
+              {
+                "key": "Accept",
+                "value": "application/yaml",
+                "disabled": true
+              },
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/api/order/v1?sort=user_id&direction=asc&page=0&size=1",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "order",
+                "v1"
+              ],
+              "query": [
+                {
+                  "key": "sort",
+                  "value": "user_id"
+                },
+                {
+                  "key": "direction",
+                  "value": "asc"
+                },
+                {
+                  "key": "page",
+                  "value": "0"
+                },
+                {
+                  "key": "size",
+                  "value": "1"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "stock",
+      "item": [
+        {
+          "name": "getAll stock movements",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "disabled": true
+              },
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "disabled": true
+              },
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              },
+              {
+                "key": "Accept",
+                "value": "application/yaml",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/api/stock-movements/v1",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "stock-movements",
+                "v1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "create stock movements",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"item\": {\"id\": 1}, \"quantity\": 10}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/api/stock-movements/v1",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "stock-movements",
+                "v1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "create stock movements xml-yaml",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/xml"
+              },
+              {
+                "key": "Accept",
+                "value": "application/yaml"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "<order>\n    <item>\n        <id>2</id>\n    </item>\n    <quantity>8</quantity>\n</order>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/api/stock-movements/v1",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "stock-movements",
+                "v1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getAll stock movements",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"item\": {\"id\": 1}, \"quantity\": 10}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/api/stock-movements/v1",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "stock-movements",
+                "v1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getAll stock movements Copy",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"item\": {\"id\": 1}, \"quantity\": 10}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/api/stock-movements/v1",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "stock-movements",
+                "v1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
