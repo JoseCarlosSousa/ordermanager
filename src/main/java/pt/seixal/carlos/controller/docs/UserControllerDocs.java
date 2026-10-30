@@ -9,6 +9,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import pt.seixal.carlos.controller.docs.media.MediaTypes;
 import pt.seixal.carlos.dto.v1.UserDTO;
 import java.util.Map;
 
@@ -18,11 +19,11 @@ public interface UserControllerDocs {
     @PostMapping(consumes = {
             MediaType.APPLICATION_JSON_VALUE,
             MediaType.APPLICATION_XML_VALUE,
-            MediaType.APPLICATION_YAML_VALUE },
+            MediaTypes.APPLICATION_YAML_VALUE },
             produces = {
                     MediaType.APPLICATION_JSON_VALUE,
                     MediaType.APPLICATION_XML_VALUE,
-                    MediaType.APPLICATION_YAML_VALUE })
+                    MediaTypes.APPLICATION_YAML_VALUE })
     @Operation(summary = "Create user", description = "Create user in the database",
             tags = { "User" },
             responses = {
@@ -37,7 +38,7 @@ public interface UserControllerDocs {
     @GetMapping(produces = {
             MediaType.APPLICATION_JSON_VALUE,
             MediaType.APPLICATION_XML_VALUE,
-            MediaType.APPLICATION_YAML_VALUE })
+            MediaTypes.APPLICATION_YAML_VALUE })
     @Operation(summary = "Find all users", description = "Find all users in the database",
             tags = { "User" },
             responses = {
@@ -53,7 +54,7 @@ public interface UserControllerDocs {
     @GetMapping(value = "/{id}", produces = {
             MediaType.APPLICATION_JSON_VALUE,
             MediaType.APPLICATION_XML_VALUE,
-            MediaType.APPLICATION_YAML_VALUE })
+            MediaTypes.APPLICATION_YAML_VALUE })
     @Operation(summary = "Find user", description = "Find user by ID",
             tags = { "User" },
             responses = {
@@ -68,11 +69,11 @@ public interface UserControllerDocs {
     @PutMapping(consumes = {
             MediaType.APPLICATION_JSON_VALUE,
             MediaType.APPLICATION_XML_VALUE,
-            MediaType.APPLICATION_YAML_VALUE },
+            MediaTypes.APPLICATION_YAML_VALUE },
             produces = {
                     MediaType.APPLICATION_JSON_VALUE,
                     MediaType.APPLICATION_XML_VALUE,
-                    MediaType.APPLICATION_YAML_VALUE })
+                    MediaTypes.APPLICATION_YAML_VALUE })
     @Operation(summary = "Update user", description = "Update user in the database",
             tags = { "User" },
             responses = {

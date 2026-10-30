@@ -6,7 +6,7 @@ import pt.seixal.carlos.model.Item;
 import pt.seixal.carlos.model.StockMovement;
 
 import java.util.List;
-import jakarta.persistence.LockModeType;
+import javax.persistence.LockModeType;
 
 public interface StockMovementRepository extends JpaRepository<StockMovement, Long> {
     @Lock(LockModeType.PESSIMISTIC_WRITE)

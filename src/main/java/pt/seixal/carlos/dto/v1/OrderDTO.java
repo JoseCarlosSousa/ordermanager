@@ -99,7 +99,8 @@ public class OrderDTO implements Serializable {
 
     @Override
     public boolean equals(Object o) {
-        if (!(o instanceof OrderDTO orderDTO)) return false;
+        if (!(o instanceof OrderDTO)) return false;
+        OrderDTO orderDTO = (OrderDTO) o;
         return quantity == orderDTO.quantity && isComplete == orderDTO.isComplete && currentAllocatedQuantity == orderDTO.currentAllocatedQuantity && Objects.equals(id, orderDTO.id) && Objects.equals(creationDate, orderDTO.creationDate) && Objects.equals(item, orderDTO.item) && Objects.equals(user, orderDTO.user) && Objects.equals(stockMovements, orderDTO.stockMovements);
     }
 

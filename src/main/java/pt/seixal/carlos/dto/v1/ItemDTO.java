@@ -31,7 +31,8 @@ public class ItemDTO implements Serializable {
 
     @Override
     public boolean equals(Object o) {
-        if (!(o instanceof ItemDTO itemDTO)) return false;
+        if (!(o instanceof ItemDTO)) return false;
+        ItemDTO itemDTO = (ItemDTO) o;
         return Objects.equals(id, itemDTO.id) && Objects.equals(name, itemDTO.name);
     }
 

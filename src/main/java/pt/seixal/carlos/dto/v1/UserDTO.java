@@ -38,7 +38,8 @@ public class UserDTO  implements Serializable {
 
     @Override
     public boolean equals(Object o) {
-        if (!(o instanceof UserDTO userDTO)) return false;
+        if (!(o instanceof UserDTO)) return false;
+        UserDTO userDTO = (UserDTO) o;
         return Objects.equals(id, userDTO.id) && Objects.equals(name, userDTO.name) && Objects.equals(email, userDTO.email);
     }
 

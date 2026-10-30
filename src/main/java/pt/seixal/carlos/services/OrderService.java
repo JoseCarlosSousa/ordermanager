@@ -16,8 +16,7 @@ import pt.seixal.carlos.repository.OrderRepository;
 import pt.seixal.carlos.util.PageableUtils;
 import pt.seixal.carlos.util.PagedModelUtils;
 
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 import static pt.seixal.carlos.mapper.DozertMapper.parseObject;
 
@@ -26,8 +25,10 @@ public class OrderService {
 
     private final Logger logger = LoggerFactory.getLogger(OrderService.class);
 
-    private static final Set<String> ALLOWED_FIELDS = Set.of(
-            "id", "creationDate", "quantity", "isComplete", "currentAllocatedQuantity"
+    private static final Set<String> ALLOWED_FIELDS = Collections.unmodifiableSet(
+            new HashSet<>(Arrays.asList(
+                    "id", "creationDate", "quantity", "isComplete", "currentAllocatedQuantity"
+            ))
     );
 
     @Autowired
