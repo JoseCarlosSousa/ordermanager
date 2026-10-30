@@ -73,7 +73,8 @@ public class StockMovementDTO  implements Serializable {
 
     @Override
     public boolean equals(Object o) {
-        if (!(o instanceof StockMovementDTO that)) return false;
+        if (!(o instanceof StockMovementDTO)) return false;
+        StockMovementDTO that = (StockMovementDTO) o;
         return quantity == that.quantity && remainingQuantity == that.remainingQuantity && Objects.equals(id, that.id) && Objects.equals(creationDate, that.creationDate) && Objects.equals(item, that.item) && Objects.equals(orders, that.orders);
     }
 

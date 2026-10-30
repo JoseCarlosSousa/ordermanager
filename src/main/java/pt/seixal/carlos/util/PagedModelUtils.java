@@ -9,6 +9,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 public class PagedModelUtils {
 
@@ -39,8 +40,8 @@ public class PagedModelUtils {
         }
 
         List<Sort.Order> validOrders = pageable.getSort().stream()
-                .filter(order -> allowedFields.contains(order.getProperty()))
-                .toList();
+                .filter(o -> allowedFields.contains(o.getProperty()))
+                .collect(Collectors.toList());
 
         if (validOrders.isEmpty()) {
             return PageRequest.of(

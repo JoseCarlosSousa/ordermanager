@@ -6,7 +6,7 @@ import pt.seixal.carlos.model.Item;
 import pt.seixal.carlos.model.Order;
 
 import java.util.List;
-import jakarta.persistence.LockModeType;
+import javax.persistence.LockModeType;
 
 public interface OrderRepository extends JpaRepository<Order, Long> {
     @Lock(LockModeType.PESSIMISTIC_WRITE)

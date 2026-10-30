@@ -9,6 +9,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import pt.seixal.carlos.controller.docs.media.MediaTypes;
 import pt.seixal.carlos.dto.v1.StockMovementDTO;
 
 import java.util.Map;
@@ -18,11 +19,11 @@ public interface StockMovementControllerDocs {
     @PostMapping(consumes = {
             MediaType.APPLICATION_JSON_VALUE,
             MediaType.APPLICATION_XML_VALUE,
-            MediaType.APPLICATION_YAML_VALUE },
+            MediaTypes.APPLICATION_YAML_VALUE },
             produces = {
                     MediaType.APPLICATION_JSON_VALUE,
                     MediaType.APPLICATION_XML_VALUE,
-                    MediaType.APPLICATION_YAML_VALUE })
+                    MediaTypes.APPLICATION_YAML_VALUE })
     @Operation(summary = "Create StockMovement", description = "Create StockMovement in the database",
             tags = { "StockMovement" },
             responses = {
@@ -37,7 +38,7 @@ public interface StockMovementControllerDocs {
     @GetMapping(produces = {
             MediaType.APPLICATION_JSON_VALUE,
             MediaType.APPLICATION_XML_VALUE,
-            MediaType.APPLICATION_YAML_VALUE })
+            MediaTypes.APPLICATION_YAML_VALUE })
     @Operation(summary = "Find all StockMovement", description = "Find all StockMovement in the database",
             tags = { "StockMovement" },
             responses = {
@@ -53,7 +54,7 @@ public interface StockMovementControllerDocs {
     @GetMapping(value = "/{id}", produces = {
             MediaType.APPLICATION_JSON_VALUE,
             MediaType.APPLICATION_XML_VALUE,
-            MediaType.APPLICATION_YAML_VALUE })
+            MediaTypes.APPLICATION_YAML_VALUE })
     @Operation(summary = "Find StockMovement", description = "Find StockMovement by ID",
             tags = { "StockMovement" },
             responses = {

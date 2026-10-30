@@ -9,6 +9,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import pt.seixal.carlos.controller.docs.media.MediaTypes;
 import pt.seixal.carlos.dto.v1.OrderDTO;
 
 import java.util.Map;
@@ -18,11 +19,11 @@ public interface OrderControllerDocs {
     @PostMapping(consumes = {
             MediaType.APPLICATION_JSON_VALUE,
             MediaType.APPLICATION_XML_VALUE,
-            MediaType.APPLICATION_YAML_VALUE },
+            MediaTypes.APPLICATION_YAML_VALUE },
             produces = {
                     MediaType.APPLICATION_JSON_VALUE,
                     MediaType.APPLICATION_XML_VALUE,
-                    MediaType.APPLICATION_YAML_VALUE })
+                    MediaTypes.APPLICATION_YAML_VALUE })
     @Operation(summary = "Create order", description = "Create order in the database",
             tags = { "Order" },
             responses = {
@@ -37,7 +38,7 @@ public interface OrderControllerDocs {
     @GetMapping(produces = {
             MediaType.APPLICATION_JSON_VALUE,
             MediaType.APPLICATION_XML_VALUE,
-            MediaType.APPLICATION_YAML_VALUE })
+            MediaTypes.APPLICATION_YAML_VALUE })
     @Operation(summary = "Find all orders", description = "Find all orders in the database",
             tags = { "Order" },
             responses = {

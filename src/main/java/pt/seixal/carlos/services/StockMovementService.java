@@ -17,8 +17,7 @@ import pt.seixal.carlos.repository.StockMovementRepository;
 import pt.seixal.carlos.util.PageableUtils;
 import pt.seixal.carlos.util.PagedModelUtils;
 
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 import static pt.seixal.carlos.mapper.DozertMapper.parseObject;
 
@@ -27,8 +26,10 @@ public class StockMovementService {
 
     private final Logger logger = LoggerFactory.getLogger(StockMovementService.class);
 
-    private static final Set<String> ALLOWED_FIELDS = Set.of(
+    private static final Set<String> ALLOWED_FIELDS = Collections.unmodifiableSet(
+            new HashSet<>(Arrays.asList(
             "id", "creationDate", "quantity", "remaining_quantity", "item_id"
+            ))
     );
 
     @Autowired
