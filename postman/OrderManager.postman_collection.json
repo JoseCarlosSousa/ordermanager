@@ -47,6 +47,80 @@
           "response": []
         },
         {
+          "name": "getAll user",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"name\": \"Carlos Sousa\", \"email\": \"sousa150@seixal.pt\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/api/user/v1",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "user",
+                "v1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getById user",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"name\": \"Carlos Sousa\", \"email\": \"sousa150@seixal.pt\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/api/user/v1",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "user",
+                "v1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
           "name": "add user xml->yaml",
           "request": {
             "method": "POST",

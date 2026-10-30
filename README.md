@@ -27,9 +27,12 @@ This is a simple order management system developed as a technical exercise. The 
 ## 📖 API Documentation & Testing
 
 ### 🟢 Swagger UI (Interactive Documentation)
-When the application is running locally, you can access the interactive Swagger interface to view all available routes, models, and execute requests directly from your browser:
+The API documentation is interactive and available online. You can view all available routes, models, and execute requests directly from your browser using the links below:
 
-👉 **[http://localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html)**
+* 🌐 **Production Environment:** [https://ordermanager-1z0k.onrender.com/swagger-ui/index.html](https://ordermanager-1z0k.onrender.com/swagger-ui/index.html)
+* 🔍 **Direct Shortcut to `findAll` Users:** [https://ordermanager-1z0k.onrender.com/swagger-ui/index.html#/User/findAll](https://ordermanager-1z0k.onrender.com/swagger-ui/index.html#/User/findAll)
+* 💻 **Local Environment (When running locally):** [http://localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html)
+
 
 ### 📦 Postman Collection
 An automated Postman collection is included in this repository to help you test the endpoints quickly, covering JSON, XML, and YAML content types.
