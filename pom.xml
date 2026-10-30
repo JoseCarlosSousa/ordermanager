@@ -28,8 +28,8 @@
 	</scm>
 	<properties>
 		<java.version>1.8</java.version>
-		<springdoc.version>2.7.0</springdoc.version>
-		<dozer.version>7.0.0</dozer.version>
+		<springdoc.version>1.8.0</springdoc.version>
+		<dozer.version>6.5.2</dozer.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -55,7 +55,7 @@
 
 		<dependency>
 			<groupId>org.springdoc</groupId>
-			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+			<artifactId>springdoc-openapi-ui</artifactId>
 			<version>${springdoc.version}</version>
 		</dependency>
 
