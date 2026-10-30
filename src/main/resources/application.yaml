@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: ordermanager
+
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: update
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/order_manager
+    username: postgres
+    password: postgres
+
+  logging:
+    level:
+      root: INFO
+    file:
+      name: logs/order_manager.log
+    pattern:
+      file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
