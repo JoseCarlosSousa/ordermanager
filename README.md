@@ -1,11 +1,11 @@
 # Simple Order Manager API
 
-This is a simple order management system developed as a technical exercise. The API allows creating and managing orders, items, users, and stock movements, automatically fulfilling pending orders as stock becomes available.
+This is a simple order management system developed as a technical exercise using **Java 8** and Spring Boot.
 
 ## 🚀 How to Run the Project
 
 ### Prerequisites
-* **Java 21** (or Java 17+)
+* **Java 8** (Source compatibility)
 * **PostgreSQL** (running on port `5432`)
 * **Maven**
 
